@@ -1,5 +1,9 @@
 name: "Wait for API Action"
 description: "A Github Action to wait for a specific API response to proceed."
+author: "Francesco Novy"
+branding:
+  icon: "clock"
+  color: "blue"
 inputs:
   method:
     description: "Which HTTP method to use"
