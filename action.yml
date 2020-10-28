@@ -1,0 +1,35 @@
+name: "Wait for API Action"
+description: "A Github Action to wait for a specific API response to proceed."
+inputs:
+  method:
+    description: "Which HTTP method to use"
+    required: true
+    default: "GET"
+  url:
+    description: "The URL to talk to"
+    required: true
+  headers:
+    description: "Optional headers, as a JSON string"
+    required: false
+  expected-status:
+    description: "Which HTTP status to expect"
+    required: true
+    default: "200"
+  expected-response-field:
+    description: 'If set, this field must exist in the API response. Use dot notation for nested fields (e.g. "data.user.name")'
+    required: false
+  expected-response-field-value:
+    description: 'If set, the field from "expected-response-field" must be this value. Nota that any value is converted to a string.'
+    required: false
+  timeout:
+    description: "The max. time in seconds to wait until the action should fail."
+    required: true
+    default: "300"
+  interval:
+    description: "The time in seconds to wait between trying the API."
+    required: true
+    default: "10"
+
+runs:
+  using: "node12"
+  main: "index.js"

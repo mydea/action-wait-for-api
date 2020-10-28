@@ -1,0 +1,19 @@
+name: action-wait-for-api
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tag-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: action-wait-for-api
+        uses: ./ # Uses an action in the root directory
+        with:
+          timeout: "20"
+          interval: "5"
+          url: "https://api.fabscale.cc/v1/status"
+          expected-response-field: "status"
