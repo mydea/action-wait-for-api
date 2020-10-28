@@ -116,7 +116,7 @@ async function doFetch({
 
   let json = await response.json();
 
-  let value = typeof getDotted(json);
+  let value = typeof getDotted(json, expectedResponseField);
   if (typeof value === 'undefined') {
     throw new Error(`Property "${expectedResponseField}" does not exist`);
   }
