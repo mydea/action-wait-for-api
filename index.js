@@ -32,6 +32,9 @@ const fetch = require('node-fetch');
       core.debug(`Response contains field "${expectedResponseField}"`);
     }
 
+    core.debug('');
+    core.debug('');
+
     await tryFetch({
       start,
       interval,
