@@ -14,9 +14,6 @@ const fetch = require('node-fetch');
       'expected-response-field-value'
     );
 
-    let headers = headersString ? JSON.parse(headersString) : {};
-    let start = +new Date();
-
     core.debug(`=== Waiting for API response to continue. ===`);
     core.debug(`URL: ${url}`);
     core.debug(`Method: ${method}`);
@@ -34,6 +31,9 @@ const fetch = require('node-fetch');
 
     core.debug('');
     core.debug('');
+
+    let headers = headersString ? JSON.parse(headersString) : {};
+    let start = +new Date();
 
     await tryFetch({
       start,
