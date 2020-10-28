@@ -1,9 +1,6 @@
 name: action-wait-for-api
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   tag-version:
