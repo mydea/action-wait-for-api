@@ -3,10 +3,11 @@ name: action-wait-for-api
 on: push
 
 jobs:
-  tag-version:
+  test-action:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
       - name: action-wait-for-api
         uses: ./ # Uses an action in the root directory
         with:
