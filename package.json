@@ -1,13 +1,24 @@
 {
   "name": "action-wait-for-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "description": "A Github Action to wait for a specific API response to proceed.",
   "author": "Francesco Novy<francesconovy@gmail.com>",
   "private": false,
+  "scripts": {
+    "test": "node tests",
+    "build": "ncc build index.js --license licenses.txt"
+  },
   "dependencies": {
     "@actions/core": "^1.2.6",
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.24.1",
+    "chai": "^4.2.0",
+    "chai-fetch": "^0.3.1",
+    "mocha": "^8.2.0",
+    "mockttp": "^1.0.3"
   }
 }

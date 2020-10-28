@@ -16,3 +16,12 @@ jobs:
           interval: "5"
           url: "https://api.fabscale.cc/v1/status"
           expected-response-field: "status"
+
+  node-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: yarn test
