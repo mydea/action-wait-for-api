@@ -24,6 +24,14 @@ with:
 
 **Required** The HTTP method to use. Default `"GET"`.
 
+### `auth`
+
+Optional username:password for HTTP Basic Authorization.
+
+### `digestAuth`
+
+Optional username:password for HTTP Digest Authorization.
+
 ### `headers`
 
 Optional JSON-string of headers to send along. For example:
