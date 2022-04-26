@@ -3,16 +3,16 @@ const { tryFetch } = require('./lib/try-fetch');
 
 (async function () {
   try {
-    let method = core.getInput('method');
-    let url = core.getInput('url');
+    const method = core.getInput('method');
+    const url = core.getInput('url');
     const authString = core.getInput('auth');
     const digestAuthString = core.getInput('digest-auth');
-    let headersString = core.getInput('headers');
-    let timeout = parseInt(core.getInput('timeout'));
-    let interval = parseInt(core.getInput('interval'));
-    let expectedStatus = parseInt(core.getInput('expected-status'));
-    let expectedResponseField = core.getInput('expected-response-field');
-    let expectedResponseFieldValue = core.getInput(
+    const headersString = core.getInput('headers');
+    const timeout = parseInt(core.getInput('timeout'));
+    const interval = parseInt(core.getInput('interval'));
+    const expectedStatus = parseInt(core.getInput('expected-status'));
+    const expectedResponseField = core.getInput('expected-response-field');
+    const expectedResponseFieldValue = core.getInput(
       'expected-response-field-value'
     );
 
