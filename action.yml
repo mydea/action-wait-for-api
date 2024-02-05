@@ -12,6 +12,12 @@ inputs:
   url:
     description: "The URL to talk to"
     required: true
+  auth:
+    description: "username:password used in HTTP Basic Authorization"
+    required: false
+  digest-auth:
+    description: "username:password used in HTTP Digest Authorization"
+    required: false
   headers:
     description: "Optional headers, as a JSON string"
     required: false

@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "node-fetch": "^2.6.1"
+    "urllib": "^2.38.0"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.24.1",
